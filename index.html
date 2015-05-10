@@ -22,6 +22,8 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <div id="speakerbox">
+            <a href="#" id="prev_btn">&laquo;</a>
+            <a href="#" id="next_btn">&raquo;</a>
             <div id="carousel"></div>
         </div>
     <!--#speakers comes from name of object in JSON data file. Mustache will cycle through and pull in json data-->
@@ -52,6 +54,16 @@
             var template = $('#speakerstpl').html();
             var html = Mustache.to_html(template, data);
             $('#carousel').html(html);
+            //loading cycle plugin script for carousel
+            $('#carousel').cycle({
+                fx: 'fade',
+                pause: 1,
+                next: '#next_btn',
+                previous: '#prev_btn',
+                speed: 500,
+                timeout: 10000
+
+            });
 
         });//getJSON
        }); //function
