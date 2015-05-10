@@ -1,0 +1,19 @@
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+
+body {
+	background: #EEE7D5;
+	font-family: 'arial', Sans-Serif;
+}
+
+#speakerbox {
+	width: 300px;
+	margin: 0 auto;
+	background: #93A1A1;
+	padding: 1px 20px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	border-radius: 10px;
+
+}
