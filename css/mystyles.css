@@ -7,7 +7,7 @@ body {
 #speakerbox {
   width: 300px;
   margin: 0 auto;
-  background: #56aeff;
+  background: #bcdfff;
   padding: 1px 20px;
   border-radius: 10px;
   overflow: hidden;
@@ -19,8 +19,8 @@ body {
   padding: 0;
 }
 #speakerbox h3 {
-  font-size: 1.5em;
-  line-height: 1em;
+  font-size: 2em;
+  line-height: 1.5em;
   font-family: 'Roboto', sans-serif;
   color: #002d56;
 }
