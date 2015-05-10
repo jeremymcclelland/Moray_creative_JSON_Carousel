@@ -1,8 +1,8 @@
-@import url(http://fonts.googleapis.com/css?family=Patua+One);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
 /*adding less styles to boilerplate css*/
 body {
   background: #ce4a27;
-  font-family: 'arial', Sans-Serif;
+  font-family: 'Roboto', sans-serif;
 }
 #speakerbox {
   width: 300px;
@@ -14,18 +14,18 @@ body {
 }
 #speakerbox h3,
 #speakerbox h4 {
-  font-weight: normal;
+  font-weight: 700;
   margin: 0;
   padding: 0;
 }
 #speakerbox h3 {
   font-size: 1.5em;
   line-height: 1em;
-  font-family: 'Patua One', cursive;
-  color: #115F79;
+  font-family: 'Roboto', sans-serif;
+  color: #002d56;
 }
 #speakerbox h4 {
-  color: #973C26;
+  color: #ce4a27;
   font-weight: bold;
   margin-bottom: 5px;
   line-height: 1.2em;
