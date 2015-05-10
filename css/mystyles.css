@@ -1,13 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Patua+One);
 /*adding less styles to boilerplate css*/
 body {
-  background: #e58d76;
+  background: #ce4a27;
   font-family: 'arial', Sans-Serif;
 }
 #speakerbox {
   width: 300px;
   margin: 0 auto;
-  background: #0070d6;
+  background: #56aeff;
   padding: 1px 20px;
   border-radius: 10px;
   overflow: hidden;
