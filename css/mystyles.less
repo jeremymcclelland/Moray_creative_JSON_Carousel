@@ -1,0 +1,66 @@
+@import url(http://fonts.googleapis.com/css?family=Patua+One);
+/*adding less styles to boilerplate css*/
+@morayCreativeBlue: #002d56;
+@morayCreativeOrange: #CE4A27;
+
+
+body {
+	background: lighten(@morayCreativeOrange, 20%);
+	font-family: 'arial', Sans-Serif;
+}
+
+#speakerbox {
+	width: 300px;
+	margin: 0 auto;
+	background: lighten(@morayCreativeBlue, 25%);
+	padding: 1px 20px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+#speakerbox h3, #speakerbox h4 {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+} 
+
+#speakerbox h3 {
+	font-size: 2em;
+	line-height: .9em;
+	font-family: 'Patua One', cursive;
+	color: #115F79;
+}
+
+#speakerbox h4 {
+	color: #973C26;
+	font-weight: bold;
+	margin-bottom: 5px;
+	line-height: 1.2em;
+}
+
+#speakerbox img {
+	float: right;
+	margin-left: 10px;
+	border-radius: 10px;
+	width: 100px;
+}
+
+#speakerbox p {
+	color: #1E3A40;
+	font-size: .9em;
+}
+
+#speakerbox #next_btn, #speakerbox #prev_btn {
+	background: #CE4A27;
+	padding: 5px 10px;
+	border-radius: 10px;
+	margin: 10px 0;
+	display: inline-block;
+}
+
+#speakerbox a#next_btn, #speakerbox a#prev_btn {
+	text-decoration: none;
+	color: #FFF;
+}
+
+
