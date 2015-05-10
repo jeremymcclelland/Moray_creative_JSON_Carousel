@@ -5,10 +5,9 @@ body {
 	font-family: 'arial', Sans-Serif;
 }
 
+div.speaker {
 
-.speaker {
-
-	background-color: none;
+	background: none;
 }
 
 #speakerbox {
