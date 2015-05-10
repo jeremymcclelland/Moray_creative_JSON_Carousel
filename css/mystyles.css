@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Patua+One);
 
 body {
-	background: #EEE7D5;
+	background: #CE4A27;
 	font-family: 'arial', Sans-Serif;
 }
 
@@ -47,7 +47,7 @@ body {
 }
 
 #speakerbox #next_btn, #speakerbox #prev_btn {
-	background: #d33682;
+	background: #CE4A27;
 	padding: 5px 10px;
 	border-radius: 10px;
 	margin: 10px 0;

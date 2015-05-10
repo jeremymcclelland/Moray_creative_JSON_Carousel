@@ -14,7 +14,7 @@
     <a href="#" id="next_btn">&raquo;</a>
     <div id="carousel"></div>
 </div>
-
+<!--using mustache.js to impmort json data into template-->
 <script id="speakerstpl" type="text/template">
     {{#speakers}}
         <div class="speaker">
@@ -38,7 +38,7 @@ $(function() {
         var template = $('#speakerstpl').html();
         var html = Mustache.to_html(template, data);
         $('#carousel').html(html);
-        
+        //formats carousel using jquery cycle library
         $('#carousel').cycle({
             fx: 'fade',
             pause: 1,
