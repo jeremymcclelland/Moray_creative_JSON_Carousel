@@ -5,10 +5,15 @@ body {
 	font-family: 'arial', Sans-Serif;
 }
 
+
+element.style {
+
+	background-color: none;
+}
+
 #speakerbox {
 	width: 300px;
 	margin: 0 auto;
-	background-color: none;
 	background: #93A1A1;
 	padding: 1px 20px;
 	-webkit-border-radius: 10px;
