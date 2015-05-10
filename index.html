@@ -1,73 +1,56 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Moray Creative Responsive Demo</title>
-        <meta name="description" content="Jeremy McClelland JSON Carousel Demo">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" href="img/favicon.png">
-        <link rel="stylesheet" href="css/normalize.min.css">
-        <link rel="stylesheet" href="css/mystyles.css">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+    <title>Moray Creative JSON Carousel</title>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/mystyles.css" />
+</head>
+<body>
 
-        <!-- Adds HTML5 element support for earlier versions of IE -->
-        <!--[if lt IE 9]>
-        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-        <div id="speakerbox">
-            <a href="#" id="prev_btn">&laquo;</a>
-            <a href="#" id="next_btn">&raquo;</a>
-            <div id="carousel"></div>
+<div id="speakerbox">
+    <a href="#" id="prev_btn">&laquo;</a>
+    <a href="#" id="next_btn">&raquo;</a>
+    <div id="carousel"></div>
+</div>
+
+<script id="speakerstpl" type="text/template">
+    {{#speakers}}
+        <div class="speaker">
+            <img src="img/{{shortname}}_tn.jpg" alt="Photo of {{name}}" />
+            <h3>{{name}}</h3>
+            <h4>{{reknown}}</h4>
+            <p>{{bio}}</p>
         </div>
-    <!--#speakers comes from name of object in JSON data file. Mustache will cycle through and pull in json data-->
-    <script id="speakerstpl" type="text/template">
+    {{/speakers}}
+</script>
 
-        {{#speakers}}
-            <div class="speaker">
-                <img src="img/{{shortname}}_tn.jpg" alt="Photo of {{name}}"/>
-                <h3>{{name}}</h3>
-                <h4>{{reknown}}</h4>
-                <p>{{bio}}</p>
-            </div>
-        {{/speakers}}
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.cycle/2.9999.8/jquery.cycle.all.min.js" type="text/javascript"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.0/mustache.min.js" type="text/javascript"></script>
 
+<script type="text/javascript">
 
+$(function() {
 
-
-    </script>
-    <!--copy script tags from cdnjs.com-->    
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery.cycle/3.03/jquery.cycle.all.min.js"></script>
-    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.8.1/mustache.min.js"></script>
+    $.getJSON('data.json', function(data) {
+        var template = $('#speakerstpl').html();
+        var html = Mustache.to_html(template, data);
+        $('#carousel').html(html);
+        
+        $('#carousel').cycle({
+            fx: 'fade',
+            pause: 1,
+            next: '#next_btn',
+            prev: '#prev_btn',
+            speed: 500,
+            timeout: 10000
+        });
+    }); //getJSON
     
-    <!--using jquery to call data.json file and create data object to feed into mustache template-->  
-    <script type="text/javascript">
-       $(function() {
-        $.getJSON('data.json', function(data) {
-            var template = $('#speakerstpl').html();
-            var html = Mustache.to_html(template, data);
-            $('#carousel').html(html);
-            //loading cycle plugin script for carousel
-            $('#carousel').cycle({
-                fx: 'fade',
-                pause: 1,
-                next: '#next_btn',
-                prev: '#prev_btn',
-                speed: 500,
-                timeout: 10000
+}); //function
 
-            });
-
-        });//getJSON
-       }); //function
-    </script>    
-    </body>
+</script>
+</body>
 </html>
